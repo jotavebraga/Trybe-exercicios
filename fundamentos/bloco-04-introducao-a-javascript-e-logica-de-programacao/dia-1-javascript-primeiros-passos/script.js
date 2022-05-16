@@ -137,15 +137,55 @@
 // }
 
 // questao 10
-const custoProduto = 7;
-const valorVenda = 23;
+// const custoProduto = 7;
+// const valorVenda = 23;
 
-if(custoProduto >= 0 && valorVenda >= 0) {
-    const valorTotal = custoProduto * 1.2;
-    const lucro = valorVenda - valorTotal;
-    const lucroTotal = lucro * 1000;
-    console.log(lucroTotal);
+// if(custoProduto >= 0 && valorVenda >= 0) {
+//     const valorTotal = custoProduto * 1.2;
+//     const lucro = valorVenda - valorTotal;
+//     const lucroTotal = lucro * 1000;
+//     console.log(lucroTotal);
+// }
+// else {
+//     console.log("erro")
+// }
+
+//  questao 11
+let aliquotaInss
+let aliquotaIr
+const salarioBruto = 4000.00;
+
+if (salarioBruto <= 1556.94) {
+    aliquotaInss = salarioBruto * 0.8;
+}
+else if (salarioBruto <=  2594.92) {
+    aliquotaInss = salarioBruto * 0.9
+}
+else if (salarioBruto <= 5189.82) {
+    aliquotaInss = salarioBruto * 0.11
 }
 else {
-    console.log("erro")
+    aliquotaInss = 570.88
 }
+
+const salarioBase = salarioBruto - aliquotaInss
+// console.log(salarioBase);
+
+if (salarioBase <= 1903.98){
+    aliquotaIr = 0
+}
+else if(salarioBase <= 2826.65){
+    aliquotaIr = (salarioBase * 0.075) - 142.80
+}
+else if (salarioBase <= 3751.05){
+    aliquotaIr = (salarioBase * 0.15) - 354.80
+}
+else if (salarioBase <= 4664.86){
+    aliquotaIr = (salarioBase * 0.225) - 636.13
+}
+else {
+    aliquotaInss = (salarioBase * 0.275) - 869.13
+}
+
+const salarioReal = (salarioBase - aliquotaIr)
+console.log(salarioReal);
