@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header-container{
+    text-align: center;
+    background-color: aqua;
+    border: 1px solid blue;
+    border-radius: 5px;
+    width: 70%;
+    margin: 40px auto;
+    padding: 30px;
+}
+
+.container{
+    border: 2px solid black;
+    width: 65%;
+    margin: auto;
+}
+
+.finalbuttons{
+    text-align: center;
+}
